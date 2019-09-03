@@ -12,6 +12,7 @@ import {
 import { RouterModule } from "@angular/router";
 import { JwtModule } from "@auth0/angular-jwt";
 import { NgxGalleryModule } from "ngx-gallery";
+import { ButtonsModule } from "ngx-bootstrap/buttons"
 import { FileUploadModule } from "ng2-file-upload";
 import { TimeAgoPipe } from "time-ago-pipe";
 
@@ -79,6 +80,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
+    ButtonsModule,
     FileUploadModule,
     JwtModule.forRoot({
       config: {

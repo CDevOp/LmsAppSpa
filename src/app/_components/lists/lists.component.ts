@@ -32,9 +32,7 @@ export class ListsComponent implements OnInit {
     this.likesParam = "Likees";
   }
 
-  loadUsers(userLikes: string) {
-    this.likesParam = userLikes;
-
+  loadUsers() {
     this.userService
       .getUsers(
         this.pagination.currentPage,
@@ -51,11 +49,10 @@ export class ListsComponent implements OnInit {
           this.alertify.error(error);
         }
       );
-    console.log(this.likesParam);
   }
 
   pageChanged(event: any): void {
     this.pagination.currentPage = event.page;
-    this.loadUsers(this.likesParam);
+    this.loadUsers();
   }
 }
