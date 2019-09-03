@@ -49,20 +49,21 @@
           '/members',
           messageContainer == 'Outbox' ? message.recipientId : message.senderId
         ]"
+        [queryParams]="{tab: 3}"
       >
         <td>{{ message.content }}</td>
         <td>
           <div *ngIf="messageContainer != 'Outbox'">
             <img
               src="{{ message?.senderPhotoUrl }}"
-              class="img-circle rounded-circle"
+              class="img-circle rounded-circle mr-1"
             />
             <strong>{{ message.senderKnownAs }}</strong>
           </div>
           <div *ngIf="messageContainer == 'Outbox'">
             <img
               src="{{ message?.recipientPhotoUrl }}"
-              class="img-circle rounded-circle"
+              class="img-circle rounded-circle mr-1"
             />
             <strong>{{ message.recipientKnownAs }}</strong>
           </div>
