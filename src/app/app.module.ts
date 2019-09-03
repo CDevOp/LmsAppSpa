@@ -80,7 +80,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
-    ButtonsModule,
+    ButtonsModule.forRoot(),
     FileUploadModule,
     JwtModule.forRoot({
       config: {
