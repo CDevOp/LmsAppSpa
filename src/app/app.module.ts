@@ -41,6 +41,7 @@ import { PhotoEditorComponent } from "./_components/members/photo-editor/photo-e
 import { ListsResolver } from "./_resolvers/lists.resolver";
 import { MessagesResolver } from "./_resolvers/messages.resolver";
 import { MemberMessagesComponent } from './_components/members/member-messages/member-messages.component';
+import { AdminPanelComponent } from './_components/admin/admin-panel/admin-panel.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -67,7 +68,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
     MemberEditComponent,
     PhotoEditorComponent,
     TimeAgoPipe,
-    MemberMessagesComponent
+    MemberMessagesComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
