@@ -15,6 +15,7 @@ import { NgxGalleryModule } from "ngx-gallery";
 import { ButtonsModule } from "ngx-bootstrap/buttons"
 import { FileUploadModule } from "ng2-file-upload";
 import { TimeAgoPipe } from "time-ago-pipe";
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -46,6 +47,7 @@ import { HasRoleDirective } from './_directives/hasRole.directive';
 import { PhotoManagementComponent } from './_components/admin/photo-management/photo-management.component';
 import { UserManagementComponent } from './_components/admin/user-management/user-management.component';
 import { AdminService } from './_services/admin.service';
+import { RolesModalComponent } from './_components/admin/roles-modal/roles-modal.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");
@@ -76,7 +78,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AdminPanelComponent,
     HasRoleDirective,
     UserManagementComponent,
-    PhotoManagementComponent
+    PhotoManagementComponent,
+    RolesModalComponent
   ],
   imports: [
     BrowserModule,
@@ -92,6 +95,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
     ButtonsModule.forRoot(),
+    ModalModule.forRoot(),
     FileUploadModule,
     JwtModule.forRoot({
       config: {
@@ -115,6 +119,9 @@ export class CustomHammerConfig extends HammerGestureConfig {
     ListsResolver,
     MessagesResolver,
     AdminService
+  ],
+  entryComponents: [
+    RolesModalComponent
   ],
   bootstrap: [AppComponent]
 })
