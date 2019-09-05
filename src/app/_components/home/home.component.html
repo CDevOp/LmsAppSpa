@@ -1,19 +1,39 @@
 <div class="container mt-5">
-    <div *ngIf="!registerMode && !learnMoreMode" style="text-align: center">
-        <h1>LMS</h1>
-        <p class="lead">Learning Management System</p>
-        <div class="text-center">
-            <button
-                class="btn btn-primary btn-lg mr-2"
-                (click)="registerToggle()"
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">LMS</h1>
+            <p class="lead">Learning Management System</p>
+            <p class="lead text-muted">
+                Nunc non blandit massa enim nec dui nunc mattis enim. Erat
+                imperdiet sed euismod nisi porta lorem mollis aliquam. Sit amet
+                luctus venenatis lectus magna fringilla urna. Cum sociis natoque
+                penatibus et. Enim diam vulputate ut pharetra sit amet aliquam.
+            </p>
+            <div
+                *ngIf="!registerMode && !learnMoreMode"
+                style="text-align: center"
             >
-                Register
-            </button>
-            <button class="btn btn-info btn-lg" (click)="learnMoreToggle()">
-                Learn more
-            </button>
+                <div class="text-center">
+                    <button
+                        mat-raised-button
+                        color="primary"
+                        class="btn btn-primary btn-lg mr-2"
+                        (click)="registerToggle()"
+                    >
+                        Register
+                    </button>
+                    <button
+                        mat-raised-button
+                        color="accent"
+                        class="btn btn-info btn-lg"
+                        (click)="learnMoreToggle()"
+                    >
+                        Learn more
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <div *ngIf="registerMode" class="container">
         <div class="row justify-content-center">
