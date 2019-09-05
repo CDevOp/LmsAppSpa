@@ -20,6 +20,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons'
 import { FileUploadModule } from 'ng2-file-upload'
 import { TimeAgoPipe } from 'time-ago-pipe'
 import { ModalModule } from 'ngx-bootstrap/modal'
+import { MatButtonModule } from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -52,6 +54,7 @@ import { PhotoManagementComponent } from './_components/admin/photo-management/p
 import { UserManagementComponent } from './_components/admin/user-management/user-management.component'
 import { AdminService } from './_services/admin.service'
 import { RolesModalComponent } from './_components/admin/roles-modal/roles-modal.component'
+import { DeveloperComponent } from './_components/developer/developer.component'
 
 export function tokenGetter() {
     return localStorage.getItem('token')
@@ -84,6 +87,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
         UserManagementComponent,
         PhotoManagementComponent,
         RolesModalComponent,
+        DeveloperComponent,
     ],
     imports: [
         BrowserModule,
@@ -91,6 +95,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
+        MatButtonModule,
+        MatIconModule,
         ReactiveFormsModule,
         PaginationModule.forRoot(),
         BsDropdownModule.forRoot(),

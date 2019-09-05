@@ -13,6 +13,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard'
 import { ListsResolver } from './_resolvers/lists.resolver'
 import { MessagesResolver } from './_resolvers/messages.resolver'
 import { AdminPanelComponent } from './_components/admin/admin-panel/admin-panel.component'
+import { DeveloperComponent } from './_components/developer/developer.component'
 
 export const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -51,6 +52,11 @@ export const appRoutes: Routes = [
                 path: 'admin',
                 component: AdminPanelComponent,
                 data: { roles: ['Admin', 'Moderator'] },
+            },
+            {
+                path: 'dev',
+                component: DeveloperComponent,
+                data: { roles: ['Developer'] },
             },
         ],
     },

@@ -19,6 +19,13 @@
             >
                 <a class="nav-link" [routerLink]="['/admin']">Admin</a>
             </li>
+            <li
+                *appHasRole="['Developer']"
+                class="nav-item"
+                routerLinkActive="active"
+            >
+                <a class="nav-link" [routerLink]="['/dev']">Developer</a>
+            </li>
         </ul>
 
         <div *ngIf="loggedIn()" class="dropdown" dropdown>

@@ -75,6 +75,7 @@ export class UserManagementComponent implements OnInit {
             { name: 'Member', value: 'Member' },
             { name: 'Student', value: 'Student' },
             { name: 'Teacher', value: 'Teacher' },
+            { name: 'Teacher', value: 'Developer' },
         ]
 
         for (let i = 0; i < availableRoles.length; i++) {
