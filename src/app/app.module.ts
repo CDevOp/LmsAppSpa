@@ -22,6 +22,8 @@ import { TimeAgoPipe } from 'time-ago-pipe'
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
+import { MatMenuModule } from '@angular/material/menu'
+import { MatInputModule } from '@angular/material/input'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -97,6 +99,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
         FormsModule,
         MatButtonModule,
         MatIconModule,
+        MatMenuModule,
+        MatInputModule,
         ReactiveFormsModule,
         PaginationModule.forRoot(),
         BsDropdownModule.forRoot(),

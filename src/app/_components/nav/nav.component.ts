@@ -52,4 +52,8 @@ export class NavComponent implements OnInit {
         this.alertify.message('Logged out')
         this.router.navigate(['/home'])
     }
+
+    redirectEditProfile() {
+        this.router.navigate(['/member/edit'])
+    }
 }
