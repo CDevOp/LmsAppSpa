@@ -1,5 +1,5 @@
 <div class="text-center mt-3">
-    <h2>Your matches - {{ pagination.totalItems }} found</h2>
+    <h2>Members - {{ pagination.totalItems }} found</h2>
 </div>
 <br />
 <div class="container mt-3">
@@ -16,30 +16,6 @@
         (ngSubmit)="loadUsers()"
         novalidate
     >
-        <div class="form-group">
-            <label for="minAge">Age From</label>
-            <input
-                type="number"
-                [(ngModel)]="userParams.minAge"
-                class="form-control ml-1"
-                style="height: 50px"
-                id="minAge"
-                name="minAge"
-            />
-        </div>
-
-        <div class="form-group px-2">
-            <label for="maxAge">Age To</label>
-            <input
-                type="number"
-                [(ngModel)]="userParams.maxAge"
-                class="form-control ml-1"
-                style="height: 50px"
-                id="maxAge"
-                name="maxAge"
-            />
-        </div>
-
         <div class="form-group px-2">
             <label for="gender">Show: </label>
             <select
@@ -58,7 +34,7 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary" style="margin-left:10px">
-            Apply Filters
+            Apply Filter
         </button>
         <button
             type="button"
