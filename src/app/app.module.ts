@@ -57,6 +57,7 @@ import { UserManagementComponent } from './_components/admin/user-management/use
 import { AdminService } from './_services/admin.service'
 import { RolesModalComponent } from './_components/admin/roles-modal/roles-modal.component'
 import { DeveloperComponent } from './_components/developer/developer.component'
+import { LearnMoreComponent } from './_components/learn-more/learn-more.component'
 
 export function tokenGetter() {
     return localStorage.getItem('token')
@@ -90,6 +91,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
         PhotoManagementComponent,
         RolesModalComponent,
         DeveloperComponent,
+        LearnMoreComponent,
     ],
     imports: [
         BrowserModule,
