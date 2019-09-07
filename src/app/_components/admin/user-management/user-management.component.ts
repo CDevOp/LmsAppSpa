@@ -4,6 +4,7 @@ import { AdminService } from 'src/app/_services/admin.service'
 import { ThrowStmt } from '@angular/compiler'
 import { BsModalService, BsModalRef } from 'ngx-bootstrap'
 import { RolesModalComponent } from '../roles-modal/roles-modal.component'
+import { AlertifyService } from 'src/app/_services/alertify.service'
 
 @Component({
     selector: 'app-user-management',
@@ -16,7 +17,8 @@ export class UserManagementComponent implements OnInit {
 
     constructor(
         private adminService: AdminService,
-        private modalService: BsModalService
+        private modalService: BsModalService,
+        private alertify: AlertifyService
     ) {}
 
     ngOnInit() {
@@ -95,5 +97,17 @@ export class UserManagementComponent implements OnInit {
             }
         }
         return roles
+    }
+
+    deleteUser(user: User) {
+        this.adminService.deleteUser(user).subscribe(
+            () => {
+                this.getUsersWithRoles()
+                this.alertify.success('User deleted')
+            },
+            error => {
+                this.alertify.error(error)
+            }
+        )
     }
 }

@@ -36,4 +36,11 @@ export class AdminService {
     rejectPhoto(photoId) {
         return this.http.post(this.baseUrl + 'admin/rejectPhoto/' + photoId, {})
     }
+
+    deleteUser(user: User) {
+        return this.http.delete(
+            this.baseUrl + 'admin/deleteUser/' + user.userName,
+            {}
+        )
+    }
 }
