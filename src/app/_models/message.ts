@@ -2,9 +2,9 @@ export interface Message {
     id: number
     senderId: number
     senderPhotoUrl: string
-    senderKnownAs: string
+    senderUsername: string
     recipientId: number
-    recipientKnownAs: string
+    recipientUsername: string
     recipientPhotoUrl: string
     content: string
     isRead: boolean
